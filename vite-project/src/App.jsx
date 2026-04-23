@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Suma from './Suma';
-import Calculadora from './Calculadora';
+import Suma from './Plus';
+import Calculadora from './Calculator';
 
 //Temporary Components
 
