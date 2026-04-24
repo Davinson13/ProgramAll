@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { estiloBoton, estiloHome } from './components/styles'
 
 function Suma({ alRegresar }) {
     const [num1, setNum1] = useState(0);
@@ -11,7 +12,7 @@ function Suma({ alRegresar }) {
     };
 
     return (
-        <>
+        <div style={estiloHome}>
             <h2>Sumar 2 numeros</h2>
 
             <label>Number 1:</label>
@@ -29,10 +30,12 @@ function Suma({ alRegresar }) {
             />
 
             <button onClick={sumar}>sumar</button>
-            <button onClick={alRegresar}>regresar</button>
 
             <h3>Resultado: {resultado}</h3>
-        </>
+
+            <button onClick={alRegresar}>regresar</button>
+        </div>
+        
     );
 }
 

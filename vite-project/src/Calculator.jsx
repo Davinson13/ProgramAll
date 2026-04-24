@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { estiloBoton, estiloHome } from './components/styles'
 
 function Calculadora({ alRegresar }) {
   const [pantalla, setPantalla] = useState('0');
@@ -37,46 +38,82 @@ function Calculadora({ alRegresar }) {
   };
 
   return (
-    <div>
+    <div style={estiloHome}>
       <hr />
-      
+
       <div style={{ fontSize: '2rem', border: '1px solid black', width: '200px', textAlign: 'right' }}>
         {pantalla}
       </div>
 
       <div>
-        <button onClick={limpiar}>AC</button>
-        <button onClick={() => elegirOperacion('/')}>/</button>
+        <button style={estiloBoton} onClick={limpiar}>
+          AC
+        </button>
+        <button style={estiloBoton} onClick={() => elegirOperacion('/')}>
+          /
+        </button>
       </div>
 
       <div>
-        <button onClick={() => presionarNumero(7)}>7</button>
-        <button onClick={() => presionarNumero(8)}>8</button>
-        <button onClick={() => presionarNumero(9)}>9</button>
-        <button onClick={() => elegirOperacion('*')}>x</button>
+        <button style={estiloBoton} onClick={() => presionarNumero(7)}>
+          7
+        </button>
+        <button style={estiloBoton} onClick={() => presionarNumero(8)}>
+          8
+        </button>
+        <button style={estiloBoton} onClick={() => presionarNumero(9)}>
+          9
+        </button>
+        <button style={estiloBoton} onClick={() => elegirOperacion('*')}>
+          x
+        </button>
       </div>
 
       <div>
-        <button onClick={() => presionarNumero(4)}>4</button>
-        <button onClick={() => presionarNumero(5)}>5</button>
-        <button onClick={() => presionarNumero(6)}>6</button>
-        <button onClick={() => elegirOperacion('-')}>-</button>
+        <button style={estiloBoton} onClick={() => presionarNumero(4)}>
+          4
+        </button>
+        <button style={estiloBoton} onClick={() => presionarNumero(5)}>
+          5
+        </button>
+        <button style={estiloBoton} onClick={() => presionarNumero(6)}>
+          6
+        </button>
+        <button style={estiloBoton} onClick={() => elegirOperacion('-')}>
+          -
+        </button>
       </div>
 
       <div>
-        <button onClick={() => presionarNumero(1)}>1</button>
-        <button onClick={() => presionarNumero(2)}>2</button>
-        <button onClick={() => presionarNumero(3)}>3</button>
-        <button onClick={() => elegirOperacion('+')}>+</button>
+        <button style={estiloBoton} onClick={() => presionarNumero(1)}>
+          1
+        </button>
+        <button style={estiloBoton} onClick={() => presionarNumero(2)}>
+          2
+        </button>
+        <button style={estiloBoton} onClick={() => presionarNumero(3)}>
+          3
+        </button>
+        <button style={estiloBoton} onClick={() => elegirOperacion('+')}>
+          +
+        </button>
       </div>
 
       <div>
-        <button onClick={() => presionarNumero(0)}>0</button>
-        <button onClick={() => presionarNumero('.')}>.</button>
-        <button onClick={calcular}>=</button>
+        <button style={estiloBoton} onClick={() => presionarNumero(0)}>
+          0
+        </button>
+        <button style={estiloBoton} onClick={() => presionarNumero('.')}>
+          .
+        </button>
+        <button style={estiloBoton} onClick={calcular}>
+          =
+        </button>
       </div>
 
-      <button onClick={alRegresar}>Regresar al Home</button>
+      <button style={estiloBoton} onClick={alRegresar}>
+        Regresar al Home
+      </button>
     </div>
   );
 }

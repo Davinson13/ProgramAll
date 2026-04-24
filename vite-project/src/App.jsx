@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Suma from './Plus';
 import Calculadora from './Calculator';
+import Search from './Search';
+import {estiloBoton, estiloHome} from './components/styles'
 
 //Temporary Components
 
@@ -21,21 +23,25 @@ function App() {
   const [seccion, setSeccion] = useState('home');
 
   return (
-    <>
+    <div style={estiloHome}>
       {seccion === 'home' && (
         <>
           <h1>Home</h1>
-          <button onClick={() => setSeccion('app1')}>
+          <button style={estiloBoton} onClick={() => setSeccion('app1')}>
             Application 1
           </button>
-          <button onClick={() => setSeccion('app2')}>
+          <button style={estiloBoton} onClick={() => setSeccion('app2')}>
             Application 2
+          </button>
+          <button style={estiloBoton} onClick={() => setSeccion('app3')}>
+            Application 3
           </button>
         </>
       )}
 
       {seccion === 'app1' && <Suma alRegresar={() => setSeccion('home')}/>}
       {seccion === 'app2' && <Calculadora alRegresar={() => setSeccion('home')}/>}
+      {seccion === 'app3' && <Search alRegresar={() => setSeccion('home')}/>}
 
       {/*
       {seccion !== 'home' && (
@@ -43,7 +49,7 @@ function App() {
           Volver al Home
         </button>
       )}*/}
-    </>
+    </div>
   );
 }
 
