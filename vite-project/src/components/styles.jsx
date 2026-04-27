@@ -42,3 +42,28 @@ export const cssSearch = `
         overflow: hidden;
     }
 `;
+
+// --- ESTILOS DE DETAILSCARDS (MODAL) ---
+export const estiloOverlay = {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.85)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 1000
+};
+
+export const estiloModal = {
+    backgroundColor: 'white',
+    padding: '25px',
+    borderRadius: '12px',
+    maxWidth: '450px',
+    width: '90%',
+    maxHeight: '90vh',
+    overflowY: 'auto',
+    position: 'relative'
+};
