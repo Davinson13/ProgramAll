@@ -67,3 +67,11 @@ export const estiloModal = {
     overflowY: 'auto',
     position: 'relative'
 };
+
+export const estiloContenedor = {
+    textAlign: 'center',
+    padding: '20px',
+    fontFamily: 'Arial, sans-serif',
+    backgroundColor: '#f4f4f4', // O el color que prefieras
+    minHeight: '100vh'
+};
